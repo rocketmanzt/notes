@@ -1,0 +1,85 @@
+快捷键 无参构造方法 alt+shift+s +c 空方法
+带参构造方法 alt+shift+s +o
+get set alt+shift+s +r
+复制上一行 ctrl+alt+向下箭头
+格式化代码alt+shift+f
+注释alt+shift+j
+初始页面
+<% 
+     request.setAttribute("Andy", "我是Andy的value");
+      //请求转发,域名不变,快,服务器
+     //request.getRequestDispatcher("jierr.jsp").forward(request, response);
+     //重定向,改变
+     response.sendRedirect("locajierr.jsp");
+%>
+跳转页面
+ reequest.getAttribute("Andy");
+
+pageContext当前页面有效
+request一次请求
+session浏览器级别,会话级别
+application服务器
+
+<c:out value="" escapeXml="false"/>
+<c:set var="key" value="我的c:set标签的value值" scope="作用域"></c:set>
+<c:remove var="key" scope="作用域"></c:remove>
+for循环
+	public void test(){
+		List<String> list= new ArrayList<String>();
+		list.add("aa");
+		list.add("bb");
+		list.add("cc");
+		for (int i = 0; i < list.size(); i++) {
+			String s =list.get(i);
+			System.out.println(s);
+		}
+		
+	}
+增强for循环
+	public void test1(){
+		List<String> list= new ArrayList<String>();
+		list.add("aa");
+		list.add("bb");
+		list.add("cc");
+		for (String s : list) {
+			System.out.println(s);
+		}
+		
+	}
+迭代器遍历
+	public void test1(){
+		List<String> list= new ArrayList<String>();
+		list.add("aa");
+		list.add("bb");
+		list.add("cc");
+        Iterator<String> it = list.iterator();
+        while(it.hasNext()){
+        	System.out.println(it.next());
+        }
+	}  
+添加xml
+public class StudentService {
+	@Test
+	public static void addstu(Student student) throws DocumentException, IOException {
+		/*
+		 * 创建解析器
+		 *
+		 */
+
+		SAXReader reader = new SAXReader();
+		Document dom = reader.read("src/student.xml");
+		Element root = dom.getRootElement();
+		// 创建根节点
+		Element stu = root.addElement("stu");
+
+		Element name1 = stu.addElement("name");
+		Element age1 = stu.addElement("age");
+		Element sex1 = stu.addElement("sex");
+		name1.setText(student.getName());
+		age1.setText(student.getAge());
+		sex1.setText(student.getSex());
+         OutputFormat format = OutputFormat.createPrettyPrint();
+         XMLWriter xmlWriter = new XMLWriter(new FileOutputStream("src/student.xml"),format);
+         xmlWriter.write(dom);
+         xmlWriter.close();
+	}

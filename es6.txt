@@ -1,0 +1,21 @@
+git clone https://github.com/cucygh/es6-webpack.git
+npm install
+
+定义变量:
+1.没有变量提升
+2.没有给window添加属性
+3.不能重复赋值
+4.const定义时必须赋值.  const定义的常量，一旦赋值不能更改
+{}块级作用域
+结构赋值
+let arr=[1,2,3,4]
+let [x,y,m,n]=arr;
+----------------
+let [x,y,m,n=1]=arr; 后面数组为undefined就走默认值
+----------------
+let[,,,n=1]省悦赋值
+----------------
+let[,,...n] 后面是数组
+//用来把某些个位置的元素复制并覆盖到其他位置上（目标位置，索引开始位置，索引结束位置）
+let arr = ['orange', '2016', '2016', '2015', '525'];
+arr.copyWithin(0, 2, 3)

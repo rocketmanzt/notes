@@ -1,0 +1,15 @@
+.btn{
+	width: 90%;
+	height:45px;
+	line-height:45px;
+	margin-top: 45px;
+	background-color:#5677fc;
+	color:#fff;
+	border-radius: 3px;
+	display: inline-block;
+	cursor: pointer;
+	transition: background-color 0.2s;
+}
+.btn:hover{
+	background-color: #3b50ce;
+}

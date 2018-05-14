@@ -1,0 +1,6 @@
+cd dir
+cnpm init
+cnpm i webpack --save-dev
+
+最简单打包
+webpack hello.js hello.bundle.js
