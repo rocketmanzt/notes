@@ -1,3 +1,4 @@
+°²×°node£¬
 cd dir
 cnpm init
 cnpm i webpack --save-dev
