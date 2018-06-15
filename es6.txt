@@ -22,3 +22,25 @@ arr.copyWithin(0, 2, 3)
 
 
 //通常函数当做参数使用时用箭头函数
+
+
+数组去重
+var arr = [1,2,2,2,2,3,4,5,5]
+var newArr = Array.from(new Set(arr));
+数组检测
+Array.isArray([])
+数组合并
+array.concat(array1, array2,...arrayN);
+数组过滤
+let array = [1,2,3]
+let filtered = array.filter( element => element>1);
+数组查找
+const array = [1,2,3]
+let finded = array.find( element => element >=1 );//返回位置,没有返回undinfind
+const array = [1,2,3]
+let finded = array.findIndex( element => element >=1 );//返回位置,没有返回-1
+const array = [1,2,3]
+let finded = array.indexOf( element => element >3 );//有返回1，没有返回-1
+遍历
+const arr = [1,2,3]
+const a = arr.forEach((v,k)=> alert(v));
